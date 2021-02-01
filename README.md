@@ -48,10 +48,3 @@ Android studio tool을 이용해 APP을 개발해본다.
 : OS로부터 발생하는 각종 event와 정보를 받아 처리하는 요소
 4. Content provider\
 : 데이터를 관리하고 다른앱의 데이터를 제공하는데 사용되는 요소
-
-# 기능
-- activity추가
-    - File -> New -> Activity -> 원하는 grid ( ex) Empty ) 
-    - app\src\main\res\layout 에 새로운 activity.xml파일이 생긴다. 
-    - 이를 MainActivity.java파일에서 연결만 해주면 새로운 창 (activity)를 사용할 수 있다.
-  
