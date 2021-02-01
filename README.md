@@ -26,7 +26,6 @@ Android studio tool을 이용해 APP을 개발해본다.
     - USB driver 설치 <https://www.lge.co.kr/lgekor/download-center/downloadCenterList.do> 
     - Device 개발자모드 설정
     - USB 디버깅 허용누르기\
- ![image](https://user-images.githubusercontent.com/70633080/106437538-b9dd9a00-64b8-11eb-9a72-f0dbdb7f0b83.png)
- ![image](https://user-images.githubusercontent.com/70633080/106437578-c104a800-64b8-11eb-941f-620d3aefb115.png)\
  ![image](https://user-images.githubusercontent.com/70633080/106442661-e1376580-64be-11eb-8a21-49ff4706c322.png)
+ ![image](https://user-images.githubusercontent.com/70633080/106437538-b9dd9a00-64b8-11eb-9a72-f0dbdb7f0b83.png)\
  ![image](https://user-images.githubusercontent.com/70633080/106442673-e72d4680-64be-11eb-9a6f-6d33db5061f7.png)
