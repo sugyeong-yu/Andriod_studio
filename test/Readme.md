@@ -26,6 +26,7 @@
 - 3 : intent-filter 안에 포함된 activity들을 앱 실행시 가장 먼저 사용하겠다는 뜻.
 
 # 2. activity_main.xml
+- 경로 : app\src\main\res\layout\activity_main.xml
 ```
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -88,6 +89,7 @@
   - 원래있던 id불러올경우 : @+빼기
 
 # 3. MainActivity.java
+- 경로 : app\src\main\java\com\example\test\MainActivity.java
 ```
 public class MainActivity extends AppCompatActivity { // 1
 
@@ -97,9 +99,16 @@ public class MainActivity extends AppCompatActivity { // 1
 
         setContentView(R.layout.activity_main); // 4
     }
+    @Override
+    protected void onStart(){
+        super.onStart();
+    }
 }
 ```
 - 1 : 안드로이드의 기본제공되는 activity를 상속받는 class이다.
 - 2 : 생명주기를 추가하려면 @Override 하면된다.
 - 3 : 생명주기를 참고하면 onCreate이라는 기본제공함수가 있다. (자동완성으로 사용)
 - 4 : R은 구성요소를 사용할 수 있도록 해주는 것이다. 이는 layout폴더에 activity_main파일을 불러와 이 activity에 해당 구성요소를 셋팅하겠다는 의미이다.
+
+# 실행결과
+![image](https://user-images.githubusercontent.com/70633080/106448601-56f2ff80-64c6-11eb-933d-35c4e1458d8e.png)
