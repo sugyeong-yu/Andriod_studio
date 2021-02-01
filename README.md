@@ -1,4 +1,4 @@
-# Andriod_studio
+# Android_studio
 Android studio tool을 이용해 APP을 개발해본다.
 - Android 앱개발을 위한 공식통합개발환경(IDE)
 - Intellij IDEA기반 (pycharm과 동일)
@@ -29,3 +29,29 @@ Android studio tool을 이용해 APP을 개발해본다.
  ![image](https://user-images.githubusercontent.com/70633080/106442661-e1376580-64be-11eb-8a21-49ff4706c322.png)
  ![image](https://user-images.githubusercontent.com/70633080/106437538-b9dd9a00-64b8-11eb-9a72-f0dbdb7f0b83.png)\
  ![image](https://user-images.githubusercontent.com/70633080/106442936-42f7cf80-64bf-11eb-87fc-afad0f09d8ae.png)
+
+# Project 구조
+- 중요한 파일
+1. MainActivity.java\
+: 프로그램의 실제 동작을 명시하는 파일 (=.py)
+2. Activity_main.xml\
+: 프로그램의 위젯배치 등 디자인요소(ui)를 명시하는 파일
+3. AndroidManifest.xml\
+: 앱의 필수적인 정보를 명시하는 파일
+
+- Android 4대 구성요소
+1. Activity\
+: 사용자와 상호작용하는 단일화면 (모든 앱은 하나이상의 액티비티를 포함한다.)
+2. Service\
+: background에서 처리해야하는 작업을 수행하는 요소 ( 앱을 종료하고도 노래가 계속해서 재생되는 것과 같은 기능을 service라함)
+3. Broadcast receiver\
+: OS로부터 발생하는 각종 event와 정보를 받아 처리하는 요소
+4. Content provider\
+: 데이터를 관리하고 다른앱의 데이터를 제공하는데 사용되는 요소
+
+# 기능
+- activity추가
+    - File -> New -> Activity -> 원하는 grid ( ex) Empty ) 
+    - app\src\main\res\layout 에 새로운 activity.xml파일이 생긴다. 
+    - 이를 MainActivity.java파일에서 연결만 해주면 새로운 창 (activity)를 사용할 수 있다.
+  
