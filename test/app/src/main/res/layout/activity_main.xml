@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--        라벨역할을 함
+linear layout  속성값설명
+xmlns >> 자동완성이니까 있음ㄴ 그냥 쓰고 없으면 ㅏ안써도되는애들
+layout_width > 액티비티의 어느정도 면적을 차지할거냐 match_parent >>부모를 다 차지한다. (액티비티 화면을 가득 채운다.)
+lay_height > 세로로 어느정도 차지할거냐
+>> warp_content 는 컨텐츠에 딱맞게한다. ( 예를들어 텍스트뷰가있으면 텍스트뷰의 사이즈게 맞게 알아서 조절하는것.)
+>> 핸드폰내에서 몇픽셀을 찾히ㅏ는지 절대크기를 정해주려면 0하면 자동완성뜨는 것들.  in는 인치안에 몇픽셀.  일반적으로 dp를 많이씀. mm나 in인치 ㅡ px픽셀
+context > 어떤 자바클래스랑 연결이 될것인가. (그냥놔두면됨)
+orientation > 수평 수직 방향 결정가능
+-->
+
+<!--위젯텍스트뷰
+layout_width , layout_height > 너비와 높이 정보
+layout_weight > ㅂ차지할 비율을 설정가능.
+text> 어떤 문자열로 셋팅할건지
+>> 앱ㅇㄹ 실행해보면 확인가능하지만 미리확인하기 위해서 code마ㅣㄹ고 design으로 넘어가면 확인가능
+background > 배경색 바꾸기 #000000 하면 검정색
+textcolor > 글자색 바꾸기 #fffffff하면 하얀색
+layout_margit > 레이아웃과 텍스트뷰의 거리를 띄울 수 있음
+layout_marginBottom > 아래를 더 띄울 수 있음. 전체마진과 방향별 속성중 하나만 써야함.
+padding >  위젯내부에있는 컨텐츠 를 띄울 수 있음. 내위젯으로부터 컨텐츠의 거리를 벌림
+
+이벤트 발생을 위해서는 위젯만의 고유  id를 가져야함.
+id > 고유한 id부여 @+id/id이름 (새로운 아이디부여할때 )
+( 원래꺼 가져올거면 @+빼는거였나,,)
+이제 이 id를 자바에서 받아와서 어떤 이벤트를 발생할것인지를 설정해주면됨.
+-->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:background="#000000"
+        android:textColor="#ffffff"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="77dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="TextView" />
+
+</LinearLayout>
