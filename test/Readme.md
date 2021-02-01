@@ -111,4 +111,4 @@ public class MainActivity extends AppCompatActivity { // 1
 - 4 : R은 구성요소를 사용할 수 있도록 해주는 것이다. 이는 layout폴더에 activity_main파일을 불러와 이 activity에 해당 구성요소를 셋팅하겠다는 의미이다.
 
 # 실행결과
-![image](https://user-images.githubusercontent.com/70633080/106448601-56f2ff80-64c6-11eb-933d-35c4e1458d8e.png)
+![image](https://user-images.githubusercontent.com/70633080/106449759-a980eb80-64c7-11eb-9865-f99a5ad86b87.png)
