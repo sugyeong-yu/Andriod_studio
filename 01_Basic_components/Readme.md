@@ -55,12 +55,33 @@ private ImageView imageView;
 - 불러온 소스들을 저장할 변수를 선언
 
 ```
-button = (Button)findViewById(R.id.button); // 
-textView = (TextView) findViewById(R.id.textView);
-editText = (EditText) findViewById(R.id.editText);
-checkBox = (CheckBox)findViewById(R.id.checkBox);
-imageView = (ImageView)findViewById(R.id.imageView);
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+    button = (Button)findViewById(R.id.button); // 
+    textView = (TextView) findViewById(R.id.textView);
+    editText = (EditText) findViewById(R.id.editText);
+    checkBox = (CheckBox)findViewById(R.id.checkBox);
+    imageView = (ImageView)findViewById(R.id.imageView);
 ```
 - findViewById : id로 부터 어떤 view를 찾겠다. id를 이용해 activity에서 만든 소스들을 변수에 저장한다.
 - R. : 리소스 접근을 위해 R을 사용
 - findView는 view를 반환하기 때문에 각 형태에 맞는 형변환을 해주어야한다. ex) (Buttion) , (TextView)
+
+1. 버튼누르면 log print , toast message 하는 event 생성 및 연결
+```
+button.setOnClickListener(new View.OnClickListener() {// 1.
+    @Override
+    public void onClick(View v){
+        Log.d("@@@@@@@@", "click됨"); // 2.
+        Toast.makeText(MainActivity.this, "dfs", Toast.LENGTH_SHORT).show(); // 3.
+    }
+});
+```
+- 1.: 버튼이 눌렸을 때 (자동완성)
+- 2.: 아래 Log_cat 에서 ("@@@@@@@@","click됨")이라는 log가 출력됨.
+- 3.: Toast message로 "dfs"라는 메세지가 출력됨.
+- 결과\
+![image](https://user-images.githubusercontent.com/70633080/107037719-d3574c80-67fe-11eb-9feb-db432ba8d866.png)
+![image](https://user-images.githubusercontent.com/70633080/107037781-ea963a00-67fe-11eb-9d12-f0aa920ce368.png)
