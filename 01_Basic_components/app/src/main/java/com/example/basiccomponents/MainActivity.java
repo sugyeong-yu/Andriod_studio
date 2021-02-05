@@ -45,30 +45,30 @@ public class MainActivity extends AppCompatActivity {
         imageView = (ImageView)findViewById(R.id.imageView);
 
         // 1. 버튼누르면 로그출력, 토스트메세지 출력하는 이벤트 달ㅇ보기
-//        button.setOnClickListener(new View.OnClickListener() {//이벤트 달기
-//            @Override
-//            public void onClick(View v){
-//                Log.d("@@@@@@@@", "click됨");
-//                Toast.makeText(MainActivity.this, "dfs", Toast.LENGTH_SHORT).show();
-//
-//            }
-//        });
-
-        // 2.버튼을 눌렀을때 textbox에 친 문자열을 가져와서 textview의 문자를 바꿔줌.
-        button.setOnClickListener(new View.OnClickListener() {
+        button.setOnClickListener(new View.OnClickListener() {//이벤트 달기
             @Override
-            public void onClick(View v) {
-                String str = editText.getText().toString();
-                str += "!!!";
+            public void onClick(View v){
+                Log.d("@@@@@@@@", "click됨");
+                Toast.makeText(MainActivity.this, "dfs", Toast.LENGTH_SHORT).show();
 
-                textView.setText(str);
             }
         });
 
+        // 2.버튼을 눌렀을때 textbox에 친 문자열을 가져와서 textview의 문자를 바꿔줌.
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                String str = editText.getText().toString();
+//                str += "!!!";
+//
+//                textView.setText(str);
+//            }
+//        });
+
         // 3. 체크박스가 바뀌고 나서
-        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+//        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 // checkbox.ischecked로 체크가 되어있으면 ~ 안되어있으면 ~
 //                boolean ret = checkBox.isChecked()
 //                if (ret){
@@ -77,9 +77,9 @@ public class MainActivity extends AppCompatActivity {
 //                else {
 //
 //                }
-
-            }
-        });
+//
+//            }
+//        });
 
         // 4. 라디 오 int checkedid 는 어떤 라디오버튼이 눌려져잇는지를 받아올수있음
         // 아레는 그냥 버튼으로 한거.
@@ -92,14 +92,14 @@ public class MainActivity extends AppCompatActivity {
 
         // 5. 화면을 여러개,,? 액티비티를 메인말고 다른ㄱ액티비티도 해줘야함.  파일 -> 뉴 -> 액티비티
         // 버튼을 누르면 새로운 창이뜸.
-        button.setOnClickListener(new View.OnClickListener() {//이벤트 달기
-            @Override
-            public void onClick(View v){
-                Intent intent = new Intent(MainActivity.this, layouttestActivity.class);
-                startActivity(intent); // 다른 액티비티를 화면에 띄움
-
-            }
-        });
+//        button.setOnClickListener(new View.OnClickListener() {//이벤트 달기
+//            @Override
+//            public void onClick(View v){
+//                Intent intent = new Intent(MainActivity.this, layouttestActivity.class);
+//                startActivity(intent); // 다른 액티비티를 화면에 띄움
+//
+//            }
+//        });
 
 
 
