@@ -69,7 +69,7 @@ protected void onCreate(Bundle savedInstanceState) {
 - R. : 리소스 접근을 위해 R을 사용
 - findView는 view를 반환하기 때문에 각 형태에 맞는 형변환을 해주어야한다. ex) (Buttion) , (TextView)
 
-1. 버튼누르면 log print , toast message 하는 event 생성 및 연결
+## 1. 버튼누르면 log print , toast message 하는 event 생성 및 연결
 ```
 button.setOnClickListener(new View.OnClickListener() {// 1.
     @Override
@@ -85,3 +85,26 @@ button.setOnClickListener(new View.OnClickListener() {// 1.
 - 결과\
 ![image](https://user-images.githubusercontent.com/70633080/107037719-d3574c80-67fe-11eb-9feb-db432ba8d866.png)
 ![image](https://user-images.githubusercontent.com/70633080/107037781-ea963a00-67fe-11eb-9d12-f0aa920ce368.png)
+
+## 2. 버튼을 눌렀을때, textbox에 입력한 문자열을 가져와서 textview의 문자를 바꿔줌
+```
+ button.setOnClickListener(new View.OnClickListener() { // 1.
+            @Override
+            public void onClick(View v) {
+                String str = editText.getText().toString(); // 2.
+                str += "!!!"; // 3.
+
+                textView.setText(str); // 4.
+            }
+        });
+```
+- 1. : 버튼이 눌렸을때(자동완성)
+- 2. : editText 즉, textbox에서 getText()로 toString() 문자열로 받아옴.
+- 3. : 받아온 문자열에 !!!를 붙여줌
+- 4. : textView에 str을 setting.
+- 결과
+  - 초기화면\ 
+  ![image](https://user-images.githubusercontent.com/70633080/108345222-5d50dd80-7221-11eb-978f-8b3bf2b0d645.png) 
+  ![image](https://user-images.githubusercontent.com/70633080/108345389-8b362200-7221-11eb-8e1b-e131bdfa644f.png)\
+  - 버튼 누른뒤\
+  ![image](https://user-images.githubusercontent.com/70633080/108345440-9c7f2e80-7221-11eb-82f2-2b752b7a25f6.png)
