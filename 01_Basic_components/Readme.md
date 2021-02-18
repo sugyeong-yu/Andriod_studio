@@ -98,10 +98,10 @@ button.setOnClickListener(new View.OnClickListener() {// 1.
             }
         });
 ```
-- 1. : 버튼이 눌렸을때(자동완성)
-- 2. : editText 즉, textbox에서 getText()로 toString() 문자열로 받아옴.
-- 3. : 받아온 문자열에 !!!를 붙여줌
-- 4. : textView에 str을 setting.
+- 1.: 버튼이 눌렸을때(자동완성)
+- 2.: editText 즉, textbox에서 getText()로 toString() 문자열로 받아옴.
+- 3.: 받아온 문자열에 !!!를 붙여줌
+- 4.: textView에 str을 setting.
 - 결과
   - 초기화면
    
@@ -127,10 +127,10 @@ checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
     }
 });
 ```
-- 1. : 체크박스가 눌렸을때 (자동완성)
-- 2. : checkBox.isChecked() 로 체크박스가 눌렸는지 안눌렸는지 상태를 True or False로 받아옴
-- 3. : True일때 이벤트
-- 4. : False일때 이벤트
+- 1.: 체크박스가 눌렸을때 (자동완성)
+- 2.: checkBox.isChecked() 로 체크박스가 눌렸는지 안눌렸는지 상태를 True or False로 받아옴
+- 3.: True일때 이벤트
+- 4.: False일때 이벤트
 
 ## 4. 버튼이 눌렸을때 image view띄우기
 ```
@@ -141,8 +141,8 @@ button.setOnClickListener(new View.OnClickListener() { // 1.
             }
         });
 ```
-- 1. : 버튼이 눌렸을때 (자동완성)
-- 2. : R이 자기자신 쓸수있게끔, icon image를 imageView에 띄움
+- 1.: 버튼이 눌렸을때 (자동완성)
+- 2.: R이 자기자신 쓸수있게끔, icon image를 imageView에 띄움
 - 결과\
 ![image](https://user-images.githubusercontent.com/70633080/108346566-ddc40e00-7222-11eb-9099-250e61b96a9f.png)
 ![image](https://user-images.githubusercontent.com/70633080/108346614-eae0fd00-7222-11eb-9809-ea779e2fb83b.png)
@@ -159,8 +159,8 @@ button.setOnClickListener(new View.OnClickListener() {// 1. 이벤트 달기
             }
         });
 ```
-- 1. : 버튼이 눌렸을때(자동완성)
-- 2. : new Intent(Main~, new_activity.class)로 Main에서 new activity를 띄우겠다. 라는 Intent를 생성
+- 1.: 버튼이 눌렸을때(자동완성)
+- 2.: new Intent(Main~, new_activity.class)로 Main에서 new activity를 띄우겠다. 라는 Intent를 생성
 - 이때, 새로만든 activity인 layouttestActivity에는 아래의 코드가 작성되어 있음.
 ```
 public class layouttestActivity extends AppCompatActivity {
@@ -172,7 +172,7 @@ public class layouttestActivity extends AppCompatActivity {
     }
 }
 ```
-- 3. : 이 새로만든 activity를 화면에 띄움
+- 3.: 이 새로만든 activity를 화면에 띄움
 - 결과\
 ![image](https://user-images.githubusercontent.com/70633080/108347383-c76a8200-7223-11eb-8737-547c74eba369.png)
 ![image](https://user-images.githubusercontent.com/70633080/108347432-d3eeda80-7223-11eb-80eb-51cc15aa8406.png)
