@@ -103,7 +103,8 @@ button.setOnClickListener(new View.OnClickListener() {// 1.
 - 3. : 받아온 문자열에 !!!를 붙여줌
 - 4. : textView에 str을 setting.
 - 결과
-  - 초기화면\ 
+  - 초기화면
+   
   ![image](https://user-images.githubusercontent.com/70633080/108345222-5d50dd80-7221-11eb-978f-8b3bf2b0d645.png) 
   ![image](https://user-images.githubusercontent.com/70633080/108345389-8b362200-7221-11eb-8e1b-e131bdfa644f.png)\
   - 버튼 누른뒤\
