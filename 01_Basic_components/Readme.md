@@ -109,3 +109,40 @@ button.setOnClickListener(new View.OnClickListener() {// 1.
   ![image](https://user-images.githubusercontent.com/70633080/108345389-8b362200-7221-11eb-8e1b-e131bdfa644f.png)\
   - 버튼 누른뒤\
   ![image](https://user-images.githubusercontent.com/70633080/108345440-9c7f2e80-7221-11eb-82f2-2b752b7a25f6.png)
+
+## 3. 체크박스가 바뀔 때 event
+```
+checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() { // 1.
+    @Override
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+        //checkbox.ischecked로 체크가 되어있으면 ~ 안되어있으면 ~
+        boolean ret = checkBox.isChecked() // 2.
+        if (ret){ // 3.
+
+        }
+        else { // 4.
+
+        }
+
+    }
+});
+```
+- 1. : 체크박스가 눌렸을때 (자동완성)
+- 2. : checkBox.isChecked() 로 체크박스가 눌렸는지 안눌렸는지 상태를 True or False로 받아옴
+- 3. : True일때 이벤트
+- 4. : False일때 이벤트
+
+## 4. 버튼이 눌렸을때 image view띄우기
+```
+button.setOnClickListener(new View.OnClickListener() { // 1.
+            @Override
+            public void onClick(View v) {
+                imageView.setImageResource(R.drawable.icon); // 2.
+            }
+        });
+```
+- 1. : 버튼이 눌렸을때 (자동완성)
+- 2. : R이 자기자신 쓸수있게끔, icon image를 imageView에 띄움
+- 결과\
+![image](https://user-images.githubusercontent.com/70633080/108346566-ddc40e00-7222-11eb-9099-250e61b96a9f.png)
+![image](https://user-images.githubusercontent.com/70633080/108346614-eae0fd00-7222-11eb-9809-ea779e2fb83b.png)
