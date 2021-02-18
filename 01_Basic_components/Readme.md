@@ -146,3 +146,33 @@ button.setOnClickListener(new View.OnClickListener() { // 1.
 - 결과\
 ![image](https://user-images.githubusercontent.com/70633080/108346566-ddc40e00-7222-11eb-9099-250e61b96a9f.png)
 ![image](https://user-images.githubusercontent.com/70633080/108346614-eae0fd00-7222-11eb-9809-ea779e2fb83b.png)
+
+## 5. 화면을 여러개띄울때 ( activity를 main이외의 창에 다른 activity를 띄울때
+- File -> New -> Activity 를 누르면 새로운 창이 뜸
+```
+button.setOnClickListener(new View.OnClickListener() {// 1. 이벤트 달기
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(MainActivity.this, layouttestActivity.class); // 2.
+                startActivity(intent); // 3. 다른 액티비티를 화면에 띄움
+
+            }
+        });
+```
+- 1. : 버튼이 눌렸을때(자동완성)
+- 2. : new Intent(Main~, new_activity.class)로 Main에서 new activity를 띄우겠다. 라는 Intent를 생성
+- 이때, 새로만든 activity인 layouttestActivity에는 아래의 코드가 작성되어 있음.
+```
+public class layouttestActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_layouttest);
+    }
+}
+```
+- 3. : 이 새로만든 activity를 화면에 띄움
+- 결과\
+![image](https://user-images.githubusercontent.com/70633080/108347383-c76a8200-7223-11eb-8737-547c74eba369.png)
+![image](https://user-images.githubusercontent.com/70633080/108347432-d3eeda80-7223-11eb-80eb-51cc15aa8406.png)
