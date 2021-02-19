@@ -193,3 +193,70 @@ CameraBridgeViewBase.CvCameraViewListener2 listner = new CameraBridgeViewBase.Cv
 - 3.:  input_addr은 숫자의 형태로 주소값이 저장되어있음 
   
 # Application 
+
+## 화면 가로모드 고정
+open cv의 카메라를 사용하면 화면이 회전되어 나온다. 따라서 보통 기기에 있는 카메라를 사용하는 경우가 많다.
+
+### AndroidManifest.xml 
+```
+<application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="practice2"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Practic2" >
+        <activity android:name=".MainActivity"
+            android:screenOrientation="landscape" # 1.
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+```
+- 1.: landscape는 가로로 고정. (후면일때 정상적), reverselandscape는 반대쪽 가로로 고정.(셀카일때 정상적)
+
+## 앱의 상단타이틀바 제거
+### res->values->themes.xml
+```
+<style name="Theme.Practic2" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="windowActionBar"> false </item> # 1.
+        <item name="windowNoTitle"> true </item> # 2.
+    </style>
+```
+- 코드에서 1.과 2.를 추가하면됨.
+
+## 배터리표시가 있는 최상단바 제거
+### MainActivity.java
+```
+protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN); // 1.
+
+        setContentView(R.layout.activity_main);
+
+        camera_view = (JavaCameraView)findViewById(R.id.camera_view);
+        camera_view.setCameraIndex(0); // 0이 후면 1이 전면
+        camera_view.setCvCameraViewListener(listner); //
+        camera_view.setCameraPermissionGranted();
+        camera_view.enableView();
+
+
+    }
+```
+- 1.: 이 코드를 추가하면 상단바 제거가 가능함.
