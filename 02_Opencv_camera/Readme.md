@@ -152,6 +152,8 @@ CameraBridgeViewBase.CvCameraViewListener2 listner = new CameraBridgeViewBase.Cv
         }
 };
 ```
+  - 카메라에 프레임이 들어왔을때, event
+  - input Frame을 받아와 rgb로 변환하여 출력하는 코드이다.
   - 1.: java의 opencv 에있는 map ?? 으로 이미지를 받아옴 rgb로
   - 2.: 따로 output주소가 필요하기때문에 복사해서 새로운 변수를 만듬
   - 3.: 따로 return을 하지않더라도 주소값을 넘겨줬으므로 수정된 것을 참조해서 사용할 수 있음
